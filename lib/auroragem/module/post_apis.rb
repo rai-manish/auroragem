@@ -63,9 +63,11 @@ module PostApis
 
 
 p post_params
+  aurora_api_key = self.api_key
+  aurora_api_secret = self.api_secret
 
-	formated_request_string = self.format_request_string(http_verb, api_uri, @aurora_api_key, timestamp, post_params)
-	signature = self.compute_hmac_signature(formated_request_string, @aurora_api_secret)
+	formated_request_string = self.format_request_string(http_verb, api_uri, aurora_api_key, timestamp, post_params)
+	signature = self.compute_hmac_signature(formated_request_string, aurora_api_secret)
          
 
 

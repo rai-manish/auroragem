@@ -1,14 +1,14 @@
-require 'auroragem/auroragem/user'
-require 'auroragem/auroragem/projects'
-require 'auroragem/auroragem/tenant'
-require 'auroragem/auroragem/compute_hmac_signature'
-require 'auroragem/auroragem/format_request_string'
-require 'auroragem/auroragem/design'
-require 'auroragem/auroragem/consumptionpro'
-require 'auroragem/auroragem/components'
-require 'auroragem/auroragem/hash_helper'
-require 'auroragem/auroragem/post_apis'
-require 'auroragem/auroragem/apis'
+require 'auroragem/module/user'
+require 'auroragem/module/projects'
+require 'auroragem/module/tenant'
+require 'auroragem/module/compute_hmac_signature'
+require 'auroragem/module/format_request_string'
+require 'auroragem/module/design'
+require 'auroragem/module/consumptionpro'
+require 'auroragem/module/components'
+require 'auroragem/module/hash_helper'
+require 'auroragem/module/post_apis'
+require 'auroragem/module/apis'
 
 module Auroragem
 	class Test
@@ -33,11 +33,11 @@ module Auroragem
 			@aurora_api_key = aurora_api_key
 		end
 
-		def self.api_secret
+		def api_secret
 			@aurora_api_secret
 		end
 
-		def self.api_key
+		def api_key
 			@aurora_api_key
 		end
 	end
